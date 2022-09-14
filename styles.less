@@ -1,0 +1,27 @@
+@width: 100%;
+@height:@width;
+@Width-first:30%;
+@height-first:50%;
+@border:solid 4px black;
+.bordered{border: @border;}
+.AS{width: @width;height:@height;}
+.box1,.box2,.box3{font-size: 20px; color: black;text-align: center;vertical-align: middle;width:@Width-first;height:@height-first;}
+body{.AS();margin: 0%;}
+html{.AS();overflow: hidden;}
+.wrap{width: 50%;height: 25%;position: absolute;justify-content: space-around;
+    align-items: center;
+border: @border;flex-wrap: wrap;
+top: 35%;left: 25%;display: flex;}
+.box1{background-color: aqua;}
+.box1,.box2,.box3{border: @border;}
+.box2{background-color: brown;}
+.box3{background-color: darkgreen;}
+.box1{width:@Width-first;height:@height-first; @media (min-width:0px) and (max-width:999px) {height: 35%;width: 85%;}
+@media (min-width: 1000px) and (max-width: 1300px){width: 35%; height: 35%;}
+}
+.box2{width:@Width-first;height:@height-first; @media (min-width:0px) and (max-width:999px) {height: 35%;width: 85%;}
+@media (min-width: 1000px) and (max-width: 1300px){width: 35%; height: 35%;}
+}
+.box3{@media (min-width:0px) and (max-width:999px) {height: 10%;width: 85%;}
+@media (min-width: 1000px) and (max-width: 1300px){width: 85%; height: 35%;}
+}
